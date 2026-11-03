@@ -6,11 +6,12 @@
 - [x] Add Discord bot entry point and basic slash commands
 - [x] Add shared module contracts and deny-by-default permission primitive
 - [x] Document architecture and security invariants
-- [ ] Create GitHub repository and push scaffold
-- [ ] Run install, typecheck, and first bot smoke test
+- [x] Create GitHub repository and push scaffold
+- [x] Run install, typecheck, build, and first bot smoke test
+- [x] Add CI validation workflow and container deployment baseline
 
 ## Phase 1 — First vertical slice
-- [ ] Bot application setup and invite flow
+- [x] Bot application setup and invite flow
 - [ ] Guild and member identity persistence
 - [ ] Configuration and permission service
 - [ ] Basic dashboard authentication and guild selection
