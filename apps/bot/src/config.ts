@@ -1,5 +1,12 @@
-import "dotenv/config";
+import { config as loadEnv } from "dotenv";
+import { fileURLToPath } from "node:url";
 import { z } from "zod";
+
+// Resolve the project-root .env regardless of whether pnpm starts this package
+// from the repository root, apps/bot, or the compiled dist directory.
+loadEnv({
+  path: fileURLToPath(new URL("../../../.env", import.meta.url)),
+});
 
 const envSchema = z.object({
   DISCORD_TOKEN: z.string().min(1),

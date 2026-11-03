@@ -7,7 +7,8 @@
     "dev": "pnpm --filter @cydrone/bot dev",
     "build": "pnpm -r build",
     "typecheck": "pnpm -r typecheck",
-    "deploy-commands": "pnpm --filter @cydrone/bot deploy-commands"
+    "deploy-commands": "pnpm --filter @cydrone/bot deploy-commands",
+    "start": "pnpm --filter @cydrone/bot start"
   },
   "devDependencies": {
     "typescript": "^5.7.3",
