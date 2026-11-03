@@ -4,7 +4,7 @@
 
 Cydrone is a modular, self-hostable Discord community platform with an optional official hosted instance.
 
-> Status: Foundation scaffold — early development. This is not production-ready yet.
+> Status: Early development. The Discord bot foundation is running; product modules and the dashboard are not implemented yet.
 
 ## Principles
 
@@ -22,7 +22,10 @@ Cydrone is a modular, self-hostable Discord community platform with an optional 
 - Shared core package with permission primitives and module contracts
 - Environment validation
 - Basic `/ping` and `/about` slash commands
-- Architecture and security decision records
+- Root-level environment loading (no duplicate `.env` copy needed)
+- GitHub Actions type-check/build workflow
+- Docker image for portable deployment
+- Architecture, security, and deployment documentation
 
 ## Requirements
 
@@ -49,11 +52,13 @@ The scaffold does not require a hosted database or AI provider yet.
    pnpm --filter @cydrone/bot deploy-commands
    ```
 
-4. Start the bot:
+4. Start the bot for local development:
 
    ```bash
    pnpm dev
    ```
+
+For container deployment and always-on hosting considerations, see [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md). The bot must run on an always-available machine or host to remain online; a local terminal session is only a development setup.
 
 Never commit `.env`, bot tokens, client secrets, or database credentials.
 
@@ -68,6 +73,7 @@ docs/
   ARCHITECTURE.md
   SECURITY.md
   ROADMAP.md
+  DEPLOYMENT.md
   decisions/
 ```
 
